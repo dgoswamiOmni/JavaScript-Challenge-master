@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <meta charset="UTF-8">
     <title>Lilly JS recruitment task</title>
     <link rel="stylesheet" href="styles.css">
@@ -9,9 +10,34 @@
 <div>
     <span class="spinner"></span>
 </div>
+<!-- Dropdown for stocks -->
+<label for="stockDropdown">Select a Stock:</label>
+<select id="stockDropdown"></select>
 
-<canvas id="chart" width="1000" height="600"></canvas>
+<!-- Button to fetch stock data -->
+<button onclick="fetchStockData()">Fetch Stock Data</button>
 
-<script src="scripts.js" defer></script>
+<div id="chart" width="1000" height="600"></div>
+
+
+<!-- Table to render stock data -->
+<table id="stockDataTable">
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Stock data will be inserted here -->
+    </tbody>
+  </table>
+
+
+  <!-- Add this where you want to display error messages -->
+<div id="errorMessage"></div>
+
+<!-- <script src="scripts.js" defer></script> -->
+<script src="scripts.js" ></script>
 </body>
 </html>

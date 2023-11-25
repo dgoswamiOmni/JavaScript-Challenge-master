@@ -1,10 +1,23 @@
-.spinner{
+.spinner {
   font-size: 140px;
+  display: inline-block;
+  animation: rotate 2s linear infinite; /* Adjust the duration and timing function as needed */
+  transform-origin: 50% 50%;
 }
+
 .spinner:after {
   content: '◌';
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 #chart {
-    border: 1px solid black;
+  border: 1px solid black;
 }
